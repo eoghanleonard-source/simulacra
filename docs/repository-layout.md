@@ -1,22 +1,22 @@
 # Repository layout
 
-The supported product in this repository is the Snowflake evidence engine. Its native seed-to-export path has been demonstrated, but three material meaning errors remain in the restored default. A later fidelity candidate was rejected and rolled back. Passing software and citation checks do not establish semantic acceptance or client readiness; [current evidence and limitations](engine/known-limitations.md) explains the qualification boundary. The detailed programme scoreboard remains in the working repository.
+This public repository contains the deployable engine, fictional demo inputs, operational tooling and software tests.
 
-## Supported engine
+| Path | Purpose |
+| --- | --- |
+| `snowflake_engine/` | Python engine, CLI, extraction contracts, Snowflake schema and execution, grouping and export |
+| `configs/engine/` | Fictional configuration and source mapping |
+| `fixtures/engine/` | Fictional source records and expected facts |
+| `deploy/engine/` | Installation support and recorded fictional delivery fixtures |
+| `scripts/engine/` | Packaging, offline CI, preflight, recovery and export inspection |
+| `scripts/demo/` | Offline lifecycle proof and supported-record composition helper |
+| `tests/engine/` | Software tests; some historical checks skip without private artifacts |
+| `docs/engine/` | Data dictionary, operations, current limitations and development evidence |
+| `configs/baselines/` | Aggregate historical evaluation decision; no raw evaluation sources |
+| `.github/workflows/` | Offline source checks on pushes and pull requests |
 
-- `snowflake_engine/` contains the engine and CLI.
-- `deploy/engine/` contains deployment support and dependency declarations.
-- `configs/engine/` and `fixtures/engine/` contain the example configuration, mapping and fictional seed sources.
-- `scripts/engine/` contains engine operational and source-release tooling.
-- `tests/engine/` contains offline engine tests.
-- [The operator guide](snowflake-engine.md) explains use; the [data dictionary](engine/data-dictionary.md) describes stored data, typed marts and exports.
+Start with the [README](../README.md), then the [operator guide](snowflake-engine.md). The [source and evaluation decision](engine/git-source-baseline.md) identifies the current code and its limits.
 
-The portable source release is built with `python scripts/engine/package_release.py --output dist/snowflake-engine.zip`. It contains the engine materials needed for that release, not the research archive or the former application.
+Local credentials, datasets, private references, research archives and generated exports are excluded. Historical documents may refer to local evidence paths unavailable in this public checkout. Earlier dbt and simulation prototypes are preserved separately in the private working archive, not distributed here.
 
-## Archived prototypes
-
-`archive/legacy/` preserves the former dbt project, training simulation, Streamlit entry point and their historical root deployment and dependency files. The original root README is preserved at `archive/legacy/root/README.md`. These are historical reference material, not the supported engine route. The runtime simulation is outside the current engine scope.
-
-## Retained research and coordination
-
-`artifacts/`, `datasets/`, `evidence/`, `acceptance/`, `FEATURES/`, `dispatch/` and other programme records remain in the working repository as evidence and coordination history. The approximately 1.4 GB of existing artifacts is retained in place, rather than deleted, and is excluded from the portable release. These records can include historical decisions and rejected candidates; consult the scoreboard for the current decision rather than treating any single historical report as current qualification.
+The source ZIP uses the explicit allowlist in `scripts/engine/package_release.py`. Adding a runtime dependency or document needed in that ZIP requires updating the allowlist. Repository-only collaboration files need not be shipped with the engine.

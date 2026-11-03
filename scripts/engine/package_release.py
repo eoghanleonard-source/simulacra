@@ -53,6 +53,7 @@ RELEASE_FILES = (
     "docs/engine/portable-delivery.md",
     "docs/engine/client-tuning-handover.md",
     "docs/engine/git-source-baseline.md",
+    "docs/engine/development-history.md",
     "tests/engine/test_aggregation.py", "tests/engine/test_export.py",
     "tests/engine/test_extraction.py", "tests/engine/test_install.py",
     "tests/engine/test_mapping.py", "tests/engine/test_native.py",

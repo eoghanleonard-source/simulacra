@@ -2,14 +2,22 @@ PYTHON ?= python3
 RELEASE ?= dist/snowflake-engine.zip
 
 .DEFAULT_GOAL := help
-.PHONY: help install dev-install test plan release
+.PHONY: help install dev-install test check demo plan release
 
 help:
 	@echo "install      Install the engine and its live-operation dependencies"
 	@echo "dev-install  Install the engine with test and build tools"
 	@echo "test         Run the offline engine test suite"
+	@echo "check        Run the focused, network-blocked CI checks"
+	@echo "demo         Run the fictional offline lifecycle demo"
 	@echo "plan         Write an offline install plan using the fictional configuration"
 	@echo "release      Create the allowlisted portable source archive"
+
+check:
+	$(PYTHON) scripts/engine/offline_ci.py
+
+demo:
+	$(PYTHON) scripts/demo/prove_recorded_lifecycle.py --output artifacts/demo/offline-lifecycle
 
 install:
 	$(PYTHON) -m pip install .
