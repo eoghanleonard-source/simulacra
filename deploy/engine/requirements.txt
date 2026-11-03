@@ -1,0 +1,3 @@
+# Local control CLI only; the installed procedure declares its own Snowpark dependency.
+snowflake-connector-python==3.18.1
+cryptography==46.0.0

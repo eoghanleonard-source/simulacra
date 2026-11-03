@@ -1,0 +1,27 @@
+{
+  "config_version": "engine-config-v1",
+  "client_id": "fictional-engine-demo",
+  "database": "YOUR_DATABASE",
+  "schema": "ENGINE_DEMO_ISOLATED",
+  "warehouse": "YOUR_EXISTING_WAREHOUSE",
+  "role": "YOUR_EXISTING_ROLE",
+  "model": "CONFIGURE_AVAILABLE_CORTEX_MODEL",
+  "embedding_model": "snowflake-arctic-embed-l-v2.0",
+  "mapping_path": "configs/engine/synthetic_mapping.json",
+  "seed_path": "fixtures/engine/synthetic_sources.json",
+  "redaction_reviewed": true,
+  "redaction_scope": "fictional seed only; replace and review before using client evidence",
+  "limits": {
+    "max_sources": 6,
+    "max_events": 60,
+    "max_generation_calls": 12,
+    "max_output_tokens": 4096,
+    "max_embedding_inputs": 128,
+    "max_input_chars": 60000,
+    "max_sql_statements": 500,
+    "statement_timeout_seconds": 120,
+    "concurrency": 1,
+    "max_run_seconds": 900
+  },
+  "enable_model_calls": false
+}

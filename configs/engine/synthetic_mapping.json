@@ -1,0 +1,182 @@
+{
+  "mapping_version": "engine-mapping-v1",
+  "record_type_field": "record_type",
+  "raw_id_field": "record_id",
+  "redaction": {
+    "reviewed": true,
+    "scope": "fictional seed only; a client must review its own rules before enabling calls",
+    "rules": [
+      {
+        "pattern": "demo-customer@example\\.invalid",
+        "replacement": "[EMAIL]",
+        "ignore_case": true
+      }
+    ]
+  },
+  "types": {
+    "support_case": {
+      "source_type": "case",
+      "fields": {
+        "source_id": "case_id"
+      },
+      "metadata": {
+        "case_id": "case_id",
+        "subject": "subject",
+        "status": "status",
+        "channel": "channel",
+        "customer_side_speaker_ids": "customer_side_speaker_ids"
+      },
+      "metadata_defaults": {
+        "fictional": true
+      },
+      "guidance_path": "guidance",
+      "events": [
+        {
+          "path": null,
+          "kind": "case_context",
+          "fields": {
+            "event_id": "context_id",
+            "text": "description",
+            "ordinal": "context_position",
+            "timestamp": "opened_at"
+          },
+          "defaults": {
+            "role": "agent",
+            "speaker": "case-reporter",
+            "authority": "case_report"
+          },
+          "text_fields": {
+            "subject": "subject",
+            "case_status": "status",
+            "channel": "channel"
+          }
+        },
+        {
+          "path": "notes",
+          "kind": "note",
+          "fields": {
+            "event_id": "note_id",
+            "text": "body",
+            "ordinal": "position",
+            "timestamp": "created_at",
+            "role": "author_role",
+            "speaker": "author"
+          },
+          "defaults": {
+            "authority": "attributed_note"
+          }
+        },
+        {
+          "path": "messages",
+          "kind": "message",
+          "fields": {
+            "event_id": "id",
+            "ordinal": "position",
+            "timestamp": "sent_at",
+            "role": "role",
+            "speaker": "speaker",
+            "text": "body",
+            "original_text": "original_body",
+            "redaction_status": "redaction_status",
+            "authority": "authority"
+          },
+          "defaults": {
+            "authority": "participant_message"
+          }
+        }
+      ]
+    },
+    "typed_chat": {
+      "source_type": "typed_chat",
+      "fields": {
+        "source_id": "conversation_id"
+      },
+      "metadata": {
+        "channel": "channel",
+        "customer_side_speaker_ids": "customer_side_speaker_ids",
+        "domain": "domain"
+      },
+      "metadata_defaults": {
+        "fictional": true
+      },
+      "guidance_path": "guidance",
+      "events": [
+        {
+          "path": "messages",
+          "kind": "message",
+          "fields": {
+            "event_id": "id",
+            "ordinal": "position",
+            "timestamp": "sent_at",
+            "role": "role",
+            "speaker": "speaker",
+            "text": "body",
+            "original_text": "original_body",
+            "redaction_status": "redaction_status",
+            "authority": "authority"
+          },
+          "defaults": {
+            "authority": "participant_message"
+          }
+        }
+      ]
+    },
+    "call_transcript": {
+      "source_type": "call_transcript",
+      "fields": {
+        "source_id": "interaction.id"
+      },
+      "metadata": {
+        "channel": "channel",
+        "customer_side_speaker_ids": "customer_side_speaker_ids",
+        "domain": "domain",
+        "timing": "timing"
+      },
+      "metadata_defaults": {
+        "fictional": true
+      },
+      "events": [
+        {
+          "path": "segments",
+          "kind": "utterance",
+          "fields": {
+            "event_id": "segment_id",
+            "ordinal": "sequence",
+            "timestamp": "at",
+            "text": "transcript",
+            "role": "speaker_role",
+            "speaker": "speaker_id"
+          },
+          "defaults": {
+            "authority": "human_transcript"
+          }
+        }
+      ]
+    },
+    "linked_note": {
+      "source_type": "case",
+      "fields": {
+        "source_id": "case_id"
+      },
+      "required_links": [
+        "case_id"
+      ],
+      "metadata": {
+        "case_id": "case_id"
+      },
+      "events": [
+        {
+          "path": null,
+          "kind": "note",
+          "fields": {
+            "event_id": "note_id",
+            "text": "body",
+            "timestamp": "created_at",
+            "role": "author_role",
+            "speaker": "author"
+          }
+        }
+      ]
+    }
+  }
+}

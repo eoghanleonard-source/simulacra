@@ -1,0 +1,42 @@
+{
+  "schema": "retained-evaluation-summary-v1",
+  "candidate_version": "0.4.5rc2",
+  "candidate_archive_sha256": "64ce2873978244cdc0ad123d8eeb4a86b28367ec038fa6c2c64bcfdf24cff06b",
+  "decision": "REJECT_QUALIFICATION_DEFAULT_PROMOTION",
+  "retained_scope": "Isolated development foundation; working native export recovery retained",
+  "source_package_version": "0.4.4",
+  "source_package_is_historical_candidate": false,
+  "sources": 40,
+  "essential_facts": {
+    "full": 161,
+    "denominator": 221
+  },
+  "essential_conditions": {
+    "full": 111,
+    "denominator": 143
+  },
+  "new_fully_preserved_units": 177,
+  "genuine_prior_full_losses": 6,
+  "confirmed_material_defects": 3,
+  "catalogue": {
+    "scenarios": 336,
+    "personas": 6,
+    "singleton_families": 342
+  },
+  "semantic_compactness": "not established",
+  "whole_catalogue_source_support": "unverified",
+  "client_qualification": false,
+  "default_promoted": false,
+  "evidence_scope": "Independent evaluation on exposed development sources; aggregate summary only. Original sources and private reference material are excluded from Git.",
+  "source_evaluation_result_sha256": "0be08baca67a659853bfc8c0e495af8c65e5f3999abc4f1926ff9ebf924bb986",
+  "source_evaluation_report_sha256": "debe98c21379b72a587c7c133114fd97247ca8fdf4ed379c9389c536bf893daa",
+  "evaluated_output_freeze_sha256": "612a78fb4909e10d299a2fc461c327038fa698b02a94f3d1ef78dca6fa751a56",
+  "evaluated_native_export_sha256": "5ada141c02ae330051b4a14abd3021560ac9c19f079f5b0047e34c266a4a62c6",
+  "frozen_default_archive_sha256": "74fc332b9a3116e345ca9657636aebbaf785512a03594f6af8ffa4d093614def",
+  "current_engine_differences_from_candidate": [
+    {
+      "path": "snowflake_engine/__init__.py",
+      "difference": "bytes differ from historical candidate"
+    }
+  ]
+}

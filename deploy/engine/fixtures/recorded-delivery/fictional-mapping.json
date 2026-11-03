@@ -1,0 +1,34 @@
+{
+  "mapping_version": "fictional-recorded-delivery-mapping-v1",
+  "record_type_field": "record_type",
+  "raw_id_field": "record_id",
+  "redaction": {
+    "reviewed": true,
+    "scope": "Wholly fictional fixture; no client source material.",
+    "rules": []
+  },
+  "types": {
+    "fictional_chat": {
+      "source_type": "typed_chat",
+      "fields": {"source_id": "history_id"},
+      "metadata": {
+        "domain": "domain",
+        "customer_side_speaker_ids": "customer_side_speaker_ids"
+      },
+      "metadata_defaults": {"fictional": true},
+      "guidance_path": "guidance",
+      "events": [{
+        "path": "messages",
+        "kind": "message",
+        "fields": {
+          "event_id": "id",
+          "ordinal": "position",
+          "role": "role",
+          "speaker": "speaker",
+          "text": "body"
+        },
+        "defaults": {"authority": "participant_message"}
+      }]
+    }
+  }
+}

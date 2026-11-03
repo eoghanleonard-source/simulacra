@@ -1,0 +1,20 @@
+This source baseline is a reviewable development package, not a qualified product release. Package metadata remains **0.4.4** and includes the explicit `evidence_v1` option. The separately frozen **0.4.5rc2** candidate has archive SHA-256 `64ce2873978244cdc0ad123d8eeb4a86b28367ec038fa6c2c64bcfdf24cff06b`; it is not byte-identical to a newly built source archive and has not replaced the default/rollback route.
+
+The version string alone does not identify the frozen rollback. Its archived 0.4.4 source package has SHA-256 `74fc332b9a3116e345ca9657636aebbaf785512a03594f6af8ffa4d093614def`. Never overwrite that artifact with a new archive of this working source. The retained evaluation summary records the historical candidate, evaluated output and evaluation-document hashes, and the current module differences from that candidate.
+
+Independent evaluation on forty exposed development conversations rejected qualification and default promotion: 161/221 facts and 111/143 conditions were fully preserved, with six genuine prior-full losses and three material defects. Native export recovery preserved the eligible capture, but did not repair its omissions or distortions. All 342 families remained singletons. Whole-catalogue support, useful complete-situation grouping and client qualification remain unverified. The checked-in aggregate decision is [the retained evaluation summary](../../configs/baselines/repaired-baseline-release40-20261103.public.json); raw sources, private references, paid responses and generated reports remain local.
+
+Run the same focused offline CI locally:
+
+```sh
+python -m pip install pytest==8.1.1
+python scripts/engine/offline_ci.py
+```
+
+The selected existing checks cover mapping, evidence binding, a fully fictional native lifecycle, export validation, SQLite reopen/export, source allowlisting and isolated package import. The runner removes inherited Snowflake variables, blocks socket use and Snowflake connector imports, and does not install the live connector. Research tests that read ignored experiment artifacts are not part of this scope. Retained historical-artifact regressions in otherwise portable test modules may skip when those private files are absent; that is disclosed rather than supplied with client-like data.
+
+The runner creates `dist/offline-ci/source.zip`, its per-file manifest and `attestation.json`. Rebuilding the same bytes must produce the same archive. The attestation identifies the checked-out Git commit, whether every packaged source file matches that commit, the source archive hash and the historical evaluation/candidate binding. Before the first source commit, a local result is explicitly an **uncommitted snapshot**. A green offline run proves software/package checks within that scope; it does not re-evaluate meaning or establish equivalence to the earlier candidate.
+
+The proposed GitHub Actions workflow uses read-only repository permissions, no persisted checkout credentials, Python 3.12 and the pinned pytest version. It does not request Snowflake secrets, deploy, publish a release or call models. Its action commits were verified against the official [checkout v4.2.2](https://github.com/actions/checkout/releases/tag/v4.2.2) and [setup-python v5.6.0](https://github.com/actions/setup-python/releases/tag/v5.6.0) releases. Dependency setup downloads tools before the network-blocked test runner starts; "offline" refers to the engine checks, not a promise of an air-gapped GitHub runner.
+
+Git ignores protect untracked credentials, local app settings, source datasets, private evaluation/evidence, generated artifacts and delivery archives. Ignore rules do not remove files already tracked or erase history. The existing initial commit contains historical seed CSVs and a dbt profile; a pattern scan found no credential signatures, but their privacy/publication status has not been established. Publication of the full existing history therefore remains a separate unresolved decision. No remote, staging, commit or push is performed by baseline preparation.

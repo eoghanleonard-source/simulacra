@@ -1,0 +1,268 @@
+[
+  {
+    "record_id": "raw-support-pending",
+    "record_type": "support_case",
+    "case_id": "support-pending",
+    "subject": "Duplicate monthly charge",
+    "description": "Fictional support case: a customer reports two monthly subscription charges.",
+    "context_id": "support-pending-context",
+    "context_position": 0,
+    "opened_at": "2026-10-01T09:00:00+00:00",
+    "status": "pending",
+    "channel": "typed_chat",
+    "customer_side_speaker_ids": [
+      "support-customer"
+    ],
+    "notes": [
+      {
+        "note_id": "support-pending-note",
+        "position": 1,
+        "created_at": "2026-10-01T09:01:00+00:00",
+        "author_role": "agent",
+        "author": "support-reporter",
+        "body": "Agent report: customer says the duplicate charge affects their budget. No refund approval is recorded."
+      }
+    ],
+    "messages": [
+      {
+        "id": "support-pending-2",
+        "position": 2,
+        "body": "I am worried. I see two monthly charges, and I need the extra one returned. Email demo-customer@example.invalid if we disconnect.",
+        "role": "customer",
+        "speaker": "support-customer",
+        "sent_at": "2026-10-01T09:02:00+00:00"
+      },
+      {
+        "id": "support-pending-3",
+        "position": 3,
+        "body": "I can submit the duplicate-charge review. I cannot confirm a refund today.",
+        "role": "agent",
+        "speaker": "support-agent",
+        "sent_at": "2026-10-01T09:03:00+00:00"
+      },
+      {
+        "id": "support-pending-4",
+        "position": 4,
+        "body": "Correction: the second charge is from September, not October. Please check September.",
+        "role": "customer",
+        "speaker": "support-customer",
+        "sent_at": "2026-10-01T09:04:00+00:00"
+      },
+      {
+        "id": "support-pending-5",
+        "position": 5,
+        "body": "There is another issue: I no longer receive invoices. Please restore invoice emails as well.",
+        "role": "customer",
+        "speaker": "support-customer",
+        "sent_at": "2026-10-01T09:05:00+00:00"
+      },
+      {
+        "id": "support-pending-6",
+        "position": 6,
+        "body": "I have submitted the review, but the refund decision is still pending. The invoice email change is not completed.",
+        "role": "agent",
+        "speaker": "support-agent",
+        "sent_at": "2026-10-01T09:06:00+00:00"
+      },
+      {
+        "id": "support-pending-7",
+        "position": 7,
+        "body": "I feel less worried now that the review is submitted, but I still need the money and the invoice emails.",
+        "role": "customer",
+        "speaker": "support-customer",
+        "sent_at": "2026-10-01T09:07:00+00:00"
+      }
+    ],
+    "guidance": [
+      {
+        "guidance_id": "fictional-review-example",
+        "authority": "fictional",
+        "text": "Fictional demonstration guidance: confirm the disputed month before submitting a review. This is not client-approved policy.",
+        "approval_status": "fictional_example_only"
+      }
+    ]
+  },
+  {
+    "record_id": "raw-support-completed",
+    "record_type": "typed_chat",
+    "conversation_id": "support-completed",
+    "domain": "support",
+    "channel": "typed_chat",
+    "customer_side_speaker_ids": [
+      "variant-customer"
+    ],
+    "messages": [
+      {
+        "id": "support-completed-0",
+        "position": 0,
+        "body": "Two annual plan charges posted today. I need the extra charge returned.",
+        "role": "customer",
+        "speaker": "variant-customer"
+      },
+      {
+        "id": "support-completed-1",
+        "position": 1,
+        "body": "The duplicate annual-plan charge was reversed today; your bank posting date is unknown.",
+        "role": "agent",
+        "speaker": "variant-agent"
+      },
+      {
+        "id": "support-completed-2",
+        "position": 2,
+        "body": "I can see one reversal in my account now. I still do not know when the bank will finish posting it.",
+        "role": "customer",
+        "speaker": "variant-customer"
+      }
+    ],
+    "guidance": []
+  },
+  {
+    "record_id": "raw-note-only",
+    "record_type": "support_case",
+    "case_id": "support-note-only",
+    "subject": "Login report",
+    "description": "Fictional case report: a customer cannot sign in after replacing a device.",
+    "context_id": "support-note-context",
+    "context_position": 0,
+    "opened_at": "2026-10-02T10:00:00+00:00",
+    "status": "open",
+    "channel": "note_only",
+    "customer_side_speaker_ids": [],
+    "notes": [
+      {
+        "note_id": "support-note-1",
+        "position": 1,
+        "created_at": null,
+        "author_role": "agent",
+        "author": "note-reporter",
+        "body": "Agent report: customer wants access restored and says the old device is unavailable. No direct customer words were recorded. An access check is proposed; completion is unknown."
+      }
+    ],
+    "messages": []
+  },
+  {
+    "record_id": "raw-sales-call",
+    "record_type": "call_transcript",
+    "interaction": {
+      "id": "sales-call"
+    },
+    "domain": "sales",
+    "channel": "spoken_transcript",
+    "timing": {
+      "availability": "relative offsets only; wall-clock timestamps were not supplied",
+      "segment_offsets_ms": [
+        0,
+        1200,
+        4100,
+        8500,
+        12300,
+        15000
+      ]
+    },
+    "customer_side_speaker_ids": [
+      "prospect"
+    ],
+    "segments": [
+      {
+        "segment_id": "sales-0",
+        "sequence": 0,
+        "transcript": "I want a twelve-seat annual plan, but our budget is at most 900 units. I am anxious about committing before our security review.",
+        "speaker_role": "prospect",
+        "speaker_id": "prospect"
+      },
+      {
+        "segment_id": "sales-1",
+        "sequence": 1,
+        "transcript": "I can send a proposal for review. I cannot promise a discount.",
+        "speaker_role": "seller",
+        "speaker_id": "seller"
+      },
+      {
+        "segment_id": "sales-2",
+        "sequence": 2,
+        "transcript": "Correction, we need ten seats, not twelve. The budget stays at 900 units.",
+        "speaker_role": "prospect",
+        "speaker_id": "prospect"
+      },
+      {
+        "segment_id": "sales-3",
+        "sequence": 3,
+        "transcript": "Before I decide, I also need to know whether data can stay in our chosen region. That is a separate security concern.",
+        "speaker_role": "prospect",
+        "speaker_id": "prospect"
+      },
+      {
+        "segment_id": "sales-4",
+        "sequence": 4,
+        "transcript": "The region question is unanswered. I have only offered to send a proposal; no agreement is signed.",
+        "speaker_role": "seller",
+        "speaker_id": "seller"
+      },
+      {
+        "segment_id": "sales-5",
+        "sequence": 5,
+        "transcript": "I feel calmer after separating the questions, but I will not sign until security confirms the region.",
+        "speaker_role": "prospect",
+        "speaker_id": "prospect"
+      }
+    ]
+  },
+  {
+    "record_id": "raw-negotiation",
+    "record_type": "typed_chat",
+    "conversation_id": "negotiation-chat",
+    "domain": "negotiation",
+    "channel": "typed_chat",
+    "customer_side_speaker_ids": [
+      "peer-a",
+      "peer-b"
+    ],
+    "messages": [
+      {
+        "id": "negotiation-0",
+        "position": 0,
+        "body": "I can offer six crates for 120 units if delivery is before Friday.",
+        "role": "negotiation_peer",
+        "speaker": "peer-a"
+      },
+      {
+        "id": "negotiation-1",
+        "position": 1,
+        "body": "I can supply four crates by Friday, or six next week.",
+        "role": "negotiation_peer",
+        "speaker": "peer-b"
+      },
+      {
+        "id": "negotiation-2",
+        "position": 2,
+        "body": "I need four this week then. Also, two must be reusable crates; disposable ones will not work.",
+        "role": "negotiation_peer",
+        "speaker": "peer-a"
+      },
+      {
+        "id": "negotiation-3",
+        "position": 3,
+        "body": "I need to check reusable stock. That is not confirmed yet.",
+        "role": "negotiation_peer",
+        "speaker": "peer-b"
+      },
+      {
+        "id": "negotiation-4",
+        "position": 4,
+        "body": "Then the order is pending. I am not accepting until reusable stock is confirmed.",
+        "role": "negotiation_peer",
+        "speaker": "peer-a"
+      }
+    ]
+  },
+  {
+    "record_id": "raw-orphan-note",
+    "record_type": "linked_note",
+    "case_id": null,
+    "note_id": "orphan-note",
+    "author_role": "agent",
+    "author": "orphan-reporter",
+    "created_at": null,
+    "body": "Fictional unlinked note: parent case identity is absent. Keep this exclusion visible; do not invent a support case."
+  }
+]

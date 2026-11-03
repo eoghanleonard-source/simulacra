@@ -1,0 +1,29 @@
+{
+  "format": "recorded-run-responses-v1",
+  "sources": [
+    {
+      "source_id": "fictional-service-01",
+      "source_hash": "e1e264f0f1dc160ee3e965aa08f705a00fba776c62d2f49763b47d95b5abd91d",
+      "operations": {
+        "extraction_v3_scenario": [
+          "{\"scenarios\":[{\"id\":\"scenario-1\",\"summary\":\"Fictional inspection history.\",\"needs\":[{\"id\":\"need-1\",\"kind\":\"primary_need\",\"summary\":\"Please inspect the cracked telescope lens.\",\"status\":\"requested\",\"related_ids\":[],\"evidence\":[{\"event_id\":\"fictional-service-01-event-0\",\"role\":\"customer\",\"speaker\":\"customer\",\"authority\":\"participant_message\",\"quote\":\"Please inspect the cracked telescope lens.\"}],\"assertion\":{\"actor\":\"customer\",\"recipient\":\"staff\",\"action\":\"inspect telescope lens\",\"scope\":\"Inspection requested; repair decision and shipment remain pending.\",\"state\":\"requested\",\"certainty\":\"explicit\"}},{\"id\":\"need-2\",\"kind\":\"late_need\",\"summary\":\"Please email the inspection estimate; the repair decision is still pending.\",\"status\":\"requested\",\"related_ids\":[],\"evidence\":[{\"event_id\":\"fictional-service-01-event-2\",\"role\":\"customer\",\"speaker\":\"customer\",\"authority\":\"participant_message\",\"quote\":\"Please email the inspection estimate; the repair decision is still pending.\"}],\"assertion\":{\"actor\":\"customer\",\"recipient\":\"staff\",\"action\":\"email inspection estimate\",\"scope\":\"Please email the inspection estimate; the repair decision is still pending.\",\"state\":\"requested\",\"certainty\":\"explicit\"}}],\"unknowns\":[\"Completion and client-approved handling remain unknown.\"]}],\"capture_status\":\"complete\",\"read_receipt\":{\"last_event_id\":\"fictional-service-01-event-2\",\"complete\":true}}"
+        ],
+        "extraction_v3_persona": [
+          "{\"personas\":[{\"id\":\"persona-1\",\"speaker\":\"customer\",\"evidence_status\":\"observed\",\"actions\":[{\"id\":\"action-1\",\"function\":\"request_action\",\"summary\":\"Please inspect the cracked telescope lens.\",\"evidence\":[{\"event_id\":\"fictional-service-01-event-0\",\"role\":\"customer\",\"speaker\":\"customer\",\"authority\":\"participant_message\",\"quote\":\"Please inspect the cracked telescope lens.\"}],\"assertion\":{\"actor\":\"customer\",\"recipient\":\"staff\",\"action\":\"inspect telescope lens\",\"scope\":\"Inspection requested; repair decision and shipment remain pending.\",\"state\":\"requested\",\"certainty\":\"explicit\"}}],\"sequences\":[],\"emotional_expression\":{\"status\":\"unknown\",\"observations\":[]},\"emotional_changes\":[],\"unknowns\":[\"No emotion assessment or enduring traits supplied.\"]}],\"capture_status\":\"complete\",\"read_receipt\":{\"last_event_id\":\"fictional-service-01-event-2\",\"complete\":true}}"
+        ]
+      }
+    },
+    {
+      "source_id": "fictional-sales-01",
+      "source_hash": "ed669b1ebd5c9558e5440d7a4b22c24e8f86907ad7dcd548d4b5a9fbf6c00ab4",
+      "operations": {
+        "extraction_v3_scenario": [
+          "{\"scenarios\":[{\"id\":\"scenario-1\",\"summary\":\"Fictional lamp quotation history.\",\"needs\":[{\"id\":\"need-1\",\"kind\":\"primary_need\",\"summary\":\"Please quote six fictional observatory lamps.\",\"status\":\"requested\",\"related_ids\":[],\"evidence\":[{\"event_id\":\"fictional-sales-01-event-0\",\"role\":\"customer\",\"speaker\":\"customer\",\"authority\":\"participant_message\",\"quote\":\"Please quote six fictional observatory lamps.\"}],\"assertion\":{\"actor\":\"customer\",\"recipient\":\"staff\",\"action\":\"quote six lamps\",\"scope\":\"Quote only; no accepted order.\",\"state\":\"requested\",\"certainty\":\"explicit\"}},{\"id\":\"need-2\",\"kind\":\"late_need\",\"summary\":\"Please include delivery to the imaginary north dome.\",\"status\":\"requested\",\"related_ids\":[],\"evidence\":[{\"event_id\":\"fictional-sales-01-event-2\",\"role\":\"customer\",\"speaker\":\"customer\",\"authority\":\"participant_message\",\"quote\":\"Please include delivery to the imaginary north dome.\"}],\"assertion\":{\"actor\":\"customer\",\"recipient\":\"staff\",\"action\":\"include north dome delivery\",\"scope\":\"Please include delivery to the imaginary north dome.\",\"state\":\"requested\",\"certainty\":\"explicit\"}}],\"unknowns\":[\"Completion and client-approved handling remain unknown.\"]}],\"capture_status\":\"complete\",\"read_receipt\":{\"last_event_id\":\"fictional-sales-01-event-2\",\"complete\":true}}"
+        ],
+        "extraction_v3_persona": [
+          "{\"personas\":[{\"id\":\"persona-1\",\"speaker\":\"customer\",\"evidence_status\":\"observed\",\"actions\":[{\"id\":\"action-1\",\"function\":\"request_action\",\"summary\":\"Please quote six fictional observatory lamps.\",\"evidence\":[{\"event_id\":\"fictional-sales-01-event-0\",\"role\":\"customer\",\"speaker\":\"customer\",\"authority\":\"participant_message\",\"quote\":\"Please quote six fictional observatory lamps.\"}],\"assertion\":{\"actor\":\"customer\",\"recipient\":\"staff\",\"action\":\"quote six lamps\",\"scope\":\"Quote only; no accepted order.\",\"state\":\"requested\",\"certainty\":\"explicit\"}}],\"sequences\":[],\"emotional_expression\":{\"status\":\"unknown\",\"observations\":[]},\"emotional_changes\":[],\"unknowns\":[\"No emotion assessment or enduring traits supplied.\"]}],\"capture_status\":\"complete\",\"read_receipt\":{\"last_event_id\":\"fictional-sales-01-event-2\",\"complete\":true}}"
+        ]
+      }
+    }
+  ]
+}

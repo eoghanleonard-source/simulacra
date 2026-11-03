@@ -1,0 +1,69 @@
+{
+  "format": "fictional-recorded-delivery-fixture-v1",
+  "client_id": "fictional-lifecycle-only",
+  "mapping": {
+    "mapping_version": "fictional-recorded-delivery-mapping-v1",
+    "record_type_field": "record_type",
+    "raw_id_field": "record_id",
+    "redaction": {
+      "reviewed": true,
+      "scope": "Wholly fictional fixture; no client source material.",
+      "rules": []
+    },
+    "types": {
+      "fictional_chat": {
+        "source_type": "typed_chat",
+        "fields": {"source_id": "history_id"},
+        "metadata": {
+          "domain": "domain",
+          "customer_side_speaker_ids": "customer_side_speaker_ids"
+        },
+        "metadata_defaults": {"fictional": true},
+        "guidance_path": "guidance",
+        "events": [{
+          "path": "messages",
+          "kind": "message",
+          "fields": {
+            "event_id": "id",
+            "ordinal": "position",
+            "role": "role",
+            "speaker": "speaker",
+            "text": "body"
+          },
+          "defaults": {"authority": "participant_message"}
+        }]
+      }
+    }
+  },
+  "histories": [
+    {
+      "source_id": "fictional-service-01",
+      "domain": "service",
+      "messages": [
+        "Please inspect the cracked telescope lens.",
+        "Inspection is pending. No replacement has shipped.",
+        "Please email the inspection estimate; the repair decision is still pending."
+      ]
+    },
+    {
+      "source_id": "fictional-sales-01",
+      "domain": "sales",
+      "messages": [
+        "Please quote six fictional observatory lamps.",
+        "A quote is being prepared. No order has been accepted.",
+        "Please include delivery to the imaginary north dome."
+      ]
+    }
+  ],
+  "stages": {
+    "baseline": {},
+    "unchanged": {},
+    "changed": {
+      "fictional-service-01": "Please email the inspection estimate and cancel the spare cap; the repair decision is still pending."
+    },
+    "failed": {
+      "fictional-service-01": "Please email the inspection estimate and cancel two spare caps; the repair decision is still pending.",
+      "malformed_source_id": "fictional-service-01"
+    }
+  }
+}

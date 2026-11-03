@@ -1,0 +1,38 @@
+[
+  {
+    "record_id": "fictional-service-01",
+    "history_id": "fictional-service-01",
+    "record_type": "fictional_chat",
+    "domain": "service",
+    "customer_side_speaker_ids": ["customer"],
+    "guidance": [{
+      "guidance_id": "fictional-guidance-service",
+      "text": "Fictional example only: client handling guidance remains unresolved.",
+      "authority": "fictional",
+      "status": "unresolved"
+    }],
+    "messages": [
+      {"id": "fictional-service-01-event-0", "position": 0, "role": "customer", "speaker": "customer", "body": "Please inspect the cracked telescope lens."},
+      {"id": "fictional-service-01-event-1", "position": 1, "role": "agent", "speaker": "staff", "body": "Inspection is pending. No replacement has shipped."},
+      {"id": "fictional-service-01-event-2", "position": 2, "role": "customer", "speaker": "customer", "body": "Please email the inspection estimate; the repair decision is still pending."}
+    ]
+  },
+  {
+    "record_id": "fictional-sales-01",
+    "history_id": "fictional-sales-01",
+    "record_type": "fictional_chat",
+    "domain": "sales",
+    "customer_side_speaker_ids": ["customer"],
+    "guidance": [{
+      "guidance_id": "fictional-guidance-sales",
+      "text": "Fictional example only: client handling guidance remains unresolved.",
+      "authority": "fictional",
+      "status": "unresolved"
+    }],
+    "messages": [
+      {"id": "fictional-sales-01-event-0", "position": 0, "role": "customer", "speaker": "customer", "body": "Please quote six fictional observatory lamps."},
+      {"id": "fictional-sales-01-event-1", "position": 1, "role": "agent", "speaker": "staff", "body": "A quote is being prepared. No order has been accepted."},
+      {"id": "fictional-sales-01-event-2", "position": 2, "role": "customer", "speaker": "customer", "body": "Please include delivery to the imaginary north dome."}
+    ]
+  }
+]

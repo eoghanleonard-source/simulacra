@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snowflake-evidence-engine"
+version = "0.4.4"
+description = "Evidence capture engine and offline-reviewable Snowflake control CLI"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "snowflake-connector-python==3.18.1",
+  "cryptography==46.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.1.1", "build>=1.2,<2"]
+
+[project.scripts]
+snowflake-engine = "snowflake_engine.cli:main"
+
+[tool.setuptools]
+packages = ["snowflake_engine"]
+include-package-data = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests/engine"]

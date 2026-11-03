@@ -1,0 +1,156 @@
+{
+  "manifest_version": "engine-seed-facts-v1",
+  "purpose": "Native smoke assertions, never model input. These fictional examples establish only small-seed fidelity.",
+  "expected_accounting": {
+    "input_record_count": 6,
+    "mapped_source_count": 5,
+    "excluded_record_count": 1,
+    "input_event_count": 25,
+    "mapped_event_count": 24,
+    "excluded_event_count": 1
+  },
+  "sources": {
+    "support-pending": {
+      "event_count": 8,
+      "must_preserve": [
+        {
+          "fact": "duplicate monthly charge review, with refund still pending",
+          "event_ids": [
+            "support-pending-2",
+            "support-pending-6"
+          ]
+        },
+        {
+          "fact": "September replaces October as disputed month",
+          "event_ids": [
+            "support-pending-4"
+          ]
+        },
+        {
+          "fact": "late secondary need to restore invoice emails; change not completed",
+          "event_ids": [
+            "support-pending-5",
+            "support-pending-6"
+          ]
+        },
+        {
+          "fact": "explicit worry becomes less worry; money and emails still needed",
+          "event_ids": [
+            "support-pending-2",
+            "support-pending-7"
+          ]
+        }
+      ],
+      "guidance_authority": "fictional",
+      "forbidden_claims": [
+        "client-approved refund policy",
+        "refund completed",
+        "invoice email restored"
+      ]
+    },
+    "support-completed": {
+      "event_count": 3,
+      "must_preserve": [
+        {
+          "fact": "annual plan rather than monthly; reported reversal completed; bank posting remains unknown",
+          "event_ids": [
+            "support-completed-0",
+            "support-completed-1",
+            "support-completed-2"
+          ]
+        }
+      ],
+      "material_variant_of": "support-pending",
+      "unknowns": [
+        "bank posting date"
+      ],
+      "forbidden_claims": [
+        "same pending refund state as support-pending"
+      ]
+    },
+    "support-note-only": {
+      "event_count": 2,
+      "must_preserve": [
+        {
+          "fact": "old device unavailable; access check proposed, completion unknown",
+          "event_ids": [
+            "support-note-1"
+          ]
+        }
+      ],
+      "persona_status": "insufficient_evidence",
+      "forbidden_claims": [
+        "direct customer quote",
+        "observed customer emotion",
+        "access restored"
+      ]
+    },
+    "sales-call": {
+      "event_count": 6,
+      "must_preserve": [
+        {
+          "fact": "ten seats corrects twelve; budget stays at 900 units",
+          "event_ids": [
+            "sales-0",
+            "sales-2"
+          ]
+        },
+        {
+          "fact": "late region constraint remains unanswered and blocks signature",
+          "event_ids": [
+            "sales-3",
+            "sales-4",
+            "sales-5"
+          ]
+        },
+        {
+          "fact": "explicit anxiety changes to calmer conditional hesitation",
+          "event_ids": [
+            "sales-0",
+            "sales-5"
+          ]
+        }
+      ],
+      "forbidden_claims": [
+        "signed agreement",
+        "approved discount",
+        "measured vocal tone",
+        "invented support case"
+      ]
+    },
+    "negotiation-chat": {
+      "event_count": 5,
+      "must_preserve": [
+        {
+          "fact": "four crates this week; two reusable; stock unconfirmed; acceptance pending",
+          "event_ids": [
+            "negotiation-1",
+            "negotiation-2",
+            "negotiation-3",
+            "negotiation-4"
+          ]
+        }
+      ],
+      "customer_side_speaker_ids": [
+        "peer-a",
+        "peer-b"
+      ],
+      "forbidden_claims": [
+        "agreed order",
+        "single assumed customer role"
+      ]
+    }
+  },
+  "excluded": [
+    {
+      "raw_id": "raw-orphan-note",
+      "required_issue": "unlinked_record",
+      "reason": "missing parent case identity"
+    }
+  ],
+  "cross_source_boundaries": [
+    "Keep monthly pending refund and annual reported reversal as material variants.",
+    "Do not make source guidance client-approved.",
+    "No enduring personality, demographics, native language, or acoustic attributes from these text fixtures."
+  ]
+}

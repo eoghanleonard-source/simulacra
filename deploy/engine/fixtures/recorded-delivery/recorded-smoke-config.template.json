@@ -1,0 +1,31 @@
+{
+  "config_version": "engine-config-v1",
+  "client_id": "fictional-lifecycle-only",
+  "database": "FICTIONAL_DELIVERY_DB",
+  "schema": "RECORDED_DELIVERY",
+  "warehouse": "FICTIONAL_WAREHOUSE",
+  "role": "FICTIONAL_OPERATOR",
+  "model": "recorded-fictional-fixtures",
+  "embedding_model": "snowflake-arctic-embed-l-v2.0",
+  "enable_model_calls": false,
+  "extraction_mode": "split_v3",
+  "persist_request_messages": true,
+  "allow_recorded_run": true,
+  "permitted_run_execution_mode": "recorded_smoke",
+  "aggregation": {
+    "max_candidate_pairs": 0,
+    "relationship_requests": 0
+  },
+  "limits": {
+    "max_sources": 2,
+    "max_events": 6,
+    "max_generation_calls": 8,
+    "max_output_tokens": 6144,
+    "max_embedding_inputs": 4,
+    "max_input_chars": 60000,
+    "max_sql_statements": 1000,
+    "statement_timeout_seconds": 60,
+    "concurrency": 1,
+    "max_run_seconds": 240
+  }
+}
